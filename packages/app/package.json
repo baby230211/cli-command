@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "seanDev figma-import ./icons"
+    "dev": "sn-cli figma-import ./icons"
   },
   "keywords": [],
   "author": "",

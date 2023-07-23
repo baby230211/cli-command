@@ -4,20 +4,26 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "seanDev": "dist/cli.js"
+    "sn-cli": "dist/cli.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "esbuild src/*.ts src/**/*.ts --platform=node --bundle --outdir=./dist --watch"
+    "clean": "rimraf dist",
+    "build": "pnpm build:common",
+    "build:common": "esbuild src/*.ts src/**/*.ts --platform=node --bundle --minify --outdir=./dist",
+    "prepublish": "pnpm build",
+    "prestart": "pnpm build",
+    "start": "node dist/cli.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
     "chalk": "^5.3.0",
     "esbuild": "0.18.15",
     "inquirer": "^9.2.8",
-    "ora": "^6.3.1"
+    "ora": "^6.3.1",
+    "rimraf": "^5.0.1"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.3",

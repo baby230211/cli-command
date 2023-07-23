@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 
 main().catch(console.error);
 
 async function main() {
   if (process.argv.length < 3) {
-    console.error('Usage: npx penguinDev <command>');
+    console.log('Usage: npx sn-cli <command>');
     process.exit(1);
   }
   const cliPath = path.dirname(fs.realpathSync(process.argv[1]));

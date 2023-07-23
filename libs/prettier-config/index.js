@@ -4,13 +4,5 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'none',
   bracketSpacing: true,
-  semi: true,
-  overrides: [
-      {
-          files: ['*.scss', '*.css', '*.json', '*.yaml', '*.yml', '*.html', '*.md'],
-          options: {
-              tabWidth: 2
-          }
-      }
-  ]
+  semi: true
 };
