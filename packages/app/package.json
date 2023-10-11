@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sn-cli figma-import ./icons"
+    "dev": "sn-cli figma-import ./icons",
+    "migrate": "sn-cli jest-migrate"
   },
   "keywords": [],
   "author": "",
